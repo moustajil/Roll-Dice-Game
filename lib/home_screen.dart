@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:rolldicegame/text_widget.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  List<Color> Colors;
+  HomeScreen({super.key,required this.Colors});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -14,16 +16,10 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              Colors.deepPurple,
-              Colors.deepPurpleAccent,
-              Colors.purpleAccent,
-            ],
+            colors: widget.Colors
           ),
         ),
-        child: Center(
-          child: Text("Hello Word", style: TextStyle(color: Colors.white)),
-        ),
+        child: TextWidget(title: "Hello Word"),
       ),
     );
   }

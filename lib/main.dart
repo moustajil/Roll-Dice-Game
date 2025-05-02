@@ -10,6 +10,8 @@ class StartApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomeScreen();
+    return HomeScreen(
+      Colors: [Colors.deepPurple, Colors.deepPurpleAccent, Colors.purpleAccent],
+    );
   }
 }
